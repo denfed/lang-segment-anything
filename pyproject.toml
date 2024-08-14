@@ -15,6 +15,9 @@ packages = [
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.11"
+torch = { version = "2.2.2+cu118", source = "torch" }
+torchvision = { version = "0.17.2+cu118", source = "torch" }
+torchaudio = { version = "2.2.2+cu118", source = "torch" }
 gradio = "^3.24.1"
 huggingface-hub = "^0.16.4"
 numpy = "^1.24.2"
@@ -23,11 +26,17 @@ Pillow = "^9.3.0"
 transformers = "^4.27.4"
 lightning = "^2.0.1"
 segment-anything = {git = "https://github.com/facebookresearch/segment-anything.git", rev = "6fdee8f2727f4506cfbbe553e23b895e27956588"}
+groundingdino = {git = "https://github.com/chullcse/GroundingDINO.git", rev = "613436d8b8b480d7313ed2803b0a5da5cd4a9541"}
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^2.20.0"
 commitizen = "2.27.0"
 pytest = "^7.1.2"
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
 
 [build-system]
 requires = ["poetry-core >= 1.4.0"]
