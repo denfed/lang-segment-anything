@@ -7,4 +7,4 @@ transformers
 lightning
 torch
 torchvision
-segment-anything @ git+https://github.com/facebookresearch/segment-anything@main
+segment-anything @ git+https://github.com/facebookresearch/segment-anything@6fdee8f2727f4506cfbbe553e23b895e27956588
