@@ -8,7 +8,7 @@ with open("requirements.txt", "r") as f:
 
 setuptools.setup(
     name='lang-sam',
-    version='0.1.0',
+    version='0.1.1',
     author='Luca Medeiros',
     author_email='lucamedeiros@outlook.com',
     description='Language segment-anything',
