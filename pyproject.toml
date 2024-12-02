@@ -24,6 +24,7 @@ transformers = "^4.27.4"
 lightning = "^2.0.1"
 poetry = "1.8.4"
 setuptools = "75.6.0"
+torch = {version = "2.2.2", source = "pytorch-gpu"}
 segment-anything = {git = "https://github.com/facebookresearch/segment-anything.git", rev = "6fdee8f2727f4506cfbbe553e23b895e27956588"}
 groundingdino = {git = "https://github.com/IDEA-Research/GroundingDINO.git", rev = "c023468fafeb0933d06aa8ba49d96089ce9a6af3"}
 
@@ -31,6 +32,11 @@ groundingdino = {git = "https://github.com/IDEA-Research/GroundingDINO.git", rev
 pre-commit = "^2.20.0"
 commitizen = "2.27.0"
 pytest = "^7.1.2"
+
+[[tool.poetry.source]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
 
 [build-system]
 requires = ["poetry-core >= 1.4.0"]
